@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: url(../Images/useme.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.store-name{
+    color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 20px;
+    text-decoration:double;
+}
+.Main-div{
+ text-align: center;
+ height: 100vh;
+}
+.Main-div ul{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    align-items: center;
+    justify-content: center;
+    height:10%;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+      background-color: rgba(23, 212, 23,0.5);
+} 
+
+.Main-div ul li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Main-div ul li a{
+text-decoration: none;
+color: rgb(252, 254, 255);
+}
+.active,.Main-div ul li:hover{
+    background-color: chartreuse;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    
+}
+.sub {
+    display:none;
+     transition: all 0.5s ease;
+     animation: dropdown 0.2s ease;
+}
+.Main-div ul li .fa{
+    margin-right: 10px;
+}
+
+.Main-div ul li:hover .sub{
+    display: block;
+    position: absolute;
+    margin-top: 10px;  
+    
+}
+.Main-div ul li:hover .sub ul li:hover{
+    background-color: none;
+}
+.Main-div ul li:hover .sub ul {
+display: flex;
+flex-direction: column;
+padding:20px;
+border-radius: 10px;
+animation: dropdown 0.3s ease;
+align-items: flex-start;
+}
+.Main-div ul li:hover .sub ul li{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    width: 100%;
+    text-align: left;
+    background: none;
+    padding: 0;
+    
+}
+.Main-div ul li:hover .sub ul li:last-child{
+    border-bottom: none;
+}
+.Main-div ul li:hover .sub ul li a:hover{
+    color: rgb(17, 243, 28);
+    background-color: none;
+}
+@keyframes dropdown{
+0%{
+   transform:scaleY(10%)
+   
+}
+   
+100%{
+    transform:scaleY(100%) 
+}
+
+}
